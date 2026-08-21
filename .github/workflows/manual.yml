@@ -1,0 +1,26 @@
+name: Manual Workflow
+
+on:
+  workflow_dispatch: 
+    inputs:
+      environment:
+        type: choice
+        required: true
+        default: staging
+        options:
+          - testing
+          - staging
+          - production
+        
+jobs:
+  deploy-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploying
+        run: |
+          echo "Deploying"
+      - name: Deployed
+        run: |
+          echo "App Deployed to ${{ inputs.environment }}"
+          
+  
