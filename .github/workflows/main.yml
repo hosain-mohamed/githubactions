@@ -12,3 +12,11 @@ jobs:
     steps:
       - name: Print a message
         run: echo "Welcome Hosain to Github Actions"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v6.1.0
+
+      - name: List files
+        run: |
+          echo "Here is My all Files"
+          ls -la
