@@ -1,0 +1,14 @@
+name : Testing Workflows
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print a message
+        run: echo "Welcome Hosain to Github Actions"
